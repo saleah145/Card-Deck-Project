@@ -1,21 +1,45 @@
-Card Deck Project
-Description
-This project simulates a standard deck of 52 playing cards. It includes classes for individual cards (Card), a full deck of cards (Deck), and a tester program (CardTester) that demonstrates creating and shuffling the deck.
+PDF & DOCX Converter + Blackjack Game
+Overview
+This project includes two main functionalities:
+PDF Converter – Convert PDF files into plain text (.txt) or Word documents (.docx).
+Blackjack Game – Play a simple console-based Blackjack game using the same deck and card structure.
+PDF Converter
 Features
-Represents a standard 52-card deck with suits: Spades, Clubs, Hearts, Diamonds.
-Shuffles the deck in an interleaved manner.
-Provides methods to inspect cards and compare them.
-Example usage through the CardTester class.
-Files
-Card.java – Defines the Card class, including rank, suit, and comparison methods.
-Deck.java – Defines the Deck class, creates a full deck, and shuffles it.
-CardTester.java – Main program to test creating and displaying the deck.
+Converts a PDF file into .txt and .docx simultaneously.
+Handles multi-page PDFs.
+Outputs files with UTF-8 encoding for proper character support.
 Usage
-Compile all Java files:
-javac Card.java Deck.java CardTester.java
-Run the tester program:
-java CardTester
-The program prints the shuffled deck to the console.
+Run the converter from the terminal:
+python3 pdf_converter.py <input_pdf> <output_txt> <output_docx>
+Example:
+python3 pdf_converter.py example.pdf output.txt output.docx
+Output:
+output.txt – plain text version of your PDF
+output.docx – Word document version of your PDF
+Requirements:
+Python 3.x
+pdfplumber (pip install pdfplumber)
+python-docx (pip install python-docx)
+Blackjack Game
+Features
+Uses the same Deck and Card classes from the PDF project.
+Plays a console-based Blackjack game with standard rules.
+Dealer plays automatically; player chooses to hit or stand.
+Usage
+Run the game from the terminal:
+javac Card.java Deck.java BlackjackGame.java
+java BlackjackGame
+Follow the prompts to play.
+File Structure
+/PDF_Converter_Project
+│
+├─ pdf_converter.py
+├─ example.pdf
+├─ requirements.txt
+├─ Card.java
+├─ Deck.java
+└─ BlackjackGame.java
 Notes
-This project can be run entirely online using GitHub Codespaces.
-No external dependencies are required.
+Ensure your PDF file exists in the same directory when running the converter.
+The Blackjack game is console-based and uses standard input to play.
+All code is compatible with Java 8+ for the game portion and Python 3.x for the converter.
